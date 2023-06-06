@@ -1,15 +1,19 @@
 <template>
-  <div class="col-lg-6">
-    <TaskForm @add-task="addTask" />
-    <p class="mb-3 mt-3">Total tasks: {{ totalTasks }}</p>
-    <p class="mb-3 mt-3">Total done tasks: {{ totalDoneTasks }}</p>
-    <TaskItem
-      v-for="task in tasks"
-      :key="task.id"
-      :task="task"
-      @delete-task="deleteTask"
-      @toggle-completed="toggleCompleted"
-    />
+  <div class="row">
+    <div class="col-lg-6">
+      <TaskForm @add-task="addTask" />
+    </div>
+    <div class="col-lg-6">
+      <p class="mb-3 mt-3">Total tasks: {{ totalTasks }}</p>
+      <p class="mb-3 mt-3">Total done tasks: {{ totalDoneTasks }}</p>
+      <TaskItem
+        v-for="task in tasks"
+        :key="task.id"
+        :task="task"
+        @delete-task="deleteTask"
+        @toggle-completed="toggleCompleted"
+      />
+    </div>
   </div>
 </template>
 <script>

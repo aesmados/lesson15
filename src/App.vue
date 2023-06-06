@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Task App</h1>
+    <h1 class="mb-5 mt-5">Task App</h1>
     <TaskList />
   </div>
 </template>

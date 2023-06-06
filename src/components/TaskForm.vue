@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="submitForm">
-    <h3>Create Task</h3>
+    <h3 class="mb-3">Create Task</h3>
     <input
       type="text"
       class="form-control mb-3"
@@ -12,6 +12,7 @@
       class="form-control mb-3"
       placeholder="Description"
       v-model="description"
+      rows="5"
     ></textarea>
     <button type="submit" class="btn btn-primary">Add task</button>
   </form>
